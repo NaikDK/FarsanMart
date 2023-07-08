@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" class="container login" style="height: 75vh;">
+    <br>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+            <div class="row">
+                <div>
+                    <mat-form-field class="full-width">
+                        <input formControlName="email" matInput placeholder="Username">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <mat-form-field class="full-width">
+                        <input type="password" formControlName="password" matInput placeholder="Password"
+                            autocomplete="on">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="login()" mat-raised-button color="primary">Login</button>
+        </mat-card-actions>
+    </mat-card>
+
+</form>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DateFilterFn } from '@angular/material/datepicker';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -29,4 +30,8 @@ export class AppComponent {
     const time = d.getTime();
     return !this.myHolidayDates.find((x) => x.getTime() == time);
   };
+
+  ngOnInit(): void {
+    localStorage.clear();
+  }
 }
